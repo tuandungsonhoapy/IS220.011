@@ -1,0 +1,13 @@
+@inject DAFramework.Services.PlanetService PlanetService;
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<div>Các hành tinh của hệ mặt trời: </div>
+<div>
+    @{
+        foreach(var item in PlanetService){
+            <div><a asp-action="@item.id_planet">@item.id_planet - @item.name_planet - @item.content</a></div>
+        }
+    }
+</div>

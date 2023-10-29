@@ -28,7 +28,8 @@ namespace DAFramework.Controllers
             
             return View("xinchao1", product);
         }
- 
+
+        [HttpGet]
         public IActionResult anything(int? id){
             var product = _productService.Where(p => p.ID == id).FirstOrDefault();
             if(product == null){
